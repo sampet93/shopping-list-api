@@ -1,8 +1,9 @@
 import express, { type Application, type Request, type Response } from 'express';
 import cors from 'cors';
+import config from './config/config.js';
 
 const app: Application = express();
-const PORT = process.env.PORT || 3000;
+const PORT = config.port;
 
 // Middleware
 app.use(cors());
